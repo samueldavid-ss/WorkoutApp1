@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:padding="24dp"
+    android:background="@color/colorPrimary"
+    android:layout_height="wrap_content">
+
+
+    <EditText
+        android:id="@+id/workoutEt"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:inputType="text"
+        android:background="@drawable/bg_whithe_bordered_primary" />
+
+    <ImageButton
+        android:id="@+id/saveWorkoutBtn"
+        android:scaleType="centerCrop"
+        android:layout_width="54dp"
+        android:theme="@style/AccentButton"
+        android:src="@mipmap/ic_save_black_24dp"
+        android:layout_height="54dp" />
+    
+
+</LinearLayout>
