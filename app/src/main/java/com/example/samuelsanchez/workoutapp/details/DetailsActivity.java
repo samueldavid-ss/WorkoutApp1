@@ -1,8 +1,8 @@
 package com.example.samuelsanchez.workoutapp.details;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -16,7 +16,7 @@ import com.example.samuelsanchez.workoutapp.models.Workout;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    private Workout workout;
+    public Workout workout;
     private EditText DescriptionET;
 
 
@@ -28,7 +28,9 @@ public class DetailsActivity extends AppCompatActivity {
         long id = getIntent().getLongExtra(WorkoutFragment.WORKOUT_SEND_ID,0);
 
         workout = Workout.findById(Workout.class, id);
-        Toast.makeText(this, "funciona"+ workout.getName(), Toast.LENGTH_SHORT).show();
+        Log.d("e1",String.valueOf(workout));
+
+      Toast.makeText(this, "funciona"+ workout.getName(), Toast.LENGTH_SHORT).show();
         DescriptionET= (EditText) findViewById(R.id.descriptionET);
     }
 
@@ -44,7 +46,7 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (workout.getDescription() != null){
-            DescriptionET.setText(workout.getDescription());
+           DescriptionET.setText(workout.getDescription());
         }
     }
 

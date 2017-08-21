@@ -27,10 +27,8 @@ public class WorkoutsAdapter extends RecyclerView.Adapter<WorkoutsAdapter.Viewho
         this.listener = listener;
     }
 
-
     @Override
     public Viewholder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_intem_workout, parent, false);
         Viewholder viewholder = new Viewholder(view);
         return viewholder;

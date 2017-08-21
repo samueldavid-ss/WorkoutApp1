@@ -17,6 +17,9 @@
     
     <TextView
         android:id="@+id/workoutTv"
+        android:textColor="@android:color/black"
+        android:typeface="serif"
+
         android:layout_weight="1"
         android:layout_gravity="center_vertical"
         android:layout_width="0dp"

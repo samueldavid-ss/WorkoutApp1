@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.samuelsanchez.workoutapp.R;
 import com.example.samuelsanchez.workoutapp.adapters.WorkoutClickListener;
@@ -57,9 +56,8 @@ public class WorkoutFragment extends Fragment implements WorkoutClickListener {
 
     @Override
     public void clickedId(long id) {
-        Intent intent = new Intent(getContext(),DetailsActivity.class);
+       Intent intent = new Intent(getContext(),DetailsActivity.class);
         intent.putExtra(WORKOUT_SEND_ID,id);
-        startActivity(intent);
-
+       startActivity(intent);
     }
 }
